@@ -9,7 +9,7 @@ const extractCommons = new webpack.optimize.CommonsChunkPlugin({
 
 module.exports = {
   entry: {
-    main: './src/main.js'
+    index: './src/index.js'
   },
   output: {
     path: path.join(__dirname, 'dist'),
