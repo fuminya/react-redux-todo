@@ -6,7 +6,7 @@
 
 * Action -> Reducer -> Store
 
->Action : 
+>Action : Actionを発行するもの
 
 >Reducer : StateとActionを受け取り、新しいStateを返すもの
 
