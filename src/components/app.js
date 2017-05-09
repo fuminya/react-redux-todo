@@ -1,10 +1,11 @@
 import React from 'react';
+import VisibleTodoList from '../containers/visibletodolist';
 
 class App extends React.Component {
     render() {
         return (
             <div>
-                Hello World!
+               <VisibleTodoList />
             </div>
         );
     }

@@ -23,6 +23,7 @@ const todos = (state = [], action) => {
     switch (action.type) {
         case 'ADD_TODO':
             return [
+                // ...はスプレッド演算子
                 ...state,
                 todo(undefined, action)
             ];
