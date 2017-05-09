@@ -10,15 +10,6 @@ import App from './components/app';
 // storeを作成する
 let store = createStore(todos);
 
-/** ここから確認 **/
-// action -> reducer -> storeの流れを確認する
-// stateを更新
-store.dispatch(addTodo('Hello World!'));
-store.dispatch(addTodo('hello world!'));
-// reducerによって更新されたstateを確認
-console.log(store.getState());
-/** ここまで確認 **/
-
 ReactDOM.render(
   <Provider store={store}>
     <App />
