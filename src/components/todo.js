@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class Todo extends React.Component {
     render() {
@@ -12,7 +13,7 @@ class Todo extends React.Component {
 }
 
 Todo.PropTypes = {
-  text: PropTypes.string.isRequired  
+  text: PropTypes.string.isRequired
 };
 
 export default Todo;
