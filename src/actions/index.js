@@ -14,3 +14,17 @@ export const addTodo = (text) => {
     text
   }
 }
+
+export const dragStartTodo = (id) => {
+  return {
+    type: 'DRAGSTART_TODO',
+    id
+  }
+}
+
+export const dragEndTodo = (id) => {
+  return {
+    type: 'DRAGEND_TODO',
+    id
+  }
+}

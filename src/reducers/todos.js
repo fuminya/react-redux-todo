@@ -8,12 +8,27 @@
 const todo = (state, action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      return {
-        id: action.id,
-        text: action.text
-      }
+        return {
+            id: action.id,
+            text: action.text,
+            drag: false
+        }
+    case 'DRAGSTART_TODO':
+        if (state.id !== action.id){
+            return state;
+        }
+        return Object.assign({}, state, {
+            drag: true
+        });
+    case 'DRAGEND_TODO':
+        if (state.id !== action.id){
+            return state;
+        }
+        return Object.assign({}, state, {
+            drag: false
+        });
     default:
-      return state
+        return state;
   }
 };
 
@@ -27,6 +42,11 @@ const todos = (state = [], action) => {
                 ...state,
                 todo(undefined, action)
             ];
+        case 'DRAGSTART_TODO':
+        case 'DRAGEND_TODO':
+            return state.map((t)=>
+                todo(t, action)
+            );
         default:
             return state;
     }

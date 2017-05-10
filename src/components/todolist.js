@@ -10,6 +10,8 @@ class TodoList extends React.Component {
                     <Todo
                         key={todo.id}
                         {...todo}
+                        onDragStart={() => this.props.onTodoDragStart(todo.id)}
+                        onDragEnd={() => this.props.onTodoDragEnd(todo.id)}
                     />
                 )}
             </ul>
