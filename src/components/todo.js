@@ -6,8 +6,8 @@ class Todo extends React.Component {
         // propとして渡って来たtextを表示するだけ
         return (
             <li style={{backgroundColor: this.props.drag ? 'red' : 'white'}}
-            onDragStart={this.props.onDragStart}
-            onDragEnd={this.props.onDragEnd}
+            onDragStart={() => {this.props.onDragStart(this.props.id)}}
+            onDragEnd={() => {this.props.onDragEnd(this.props.id)}}
             draggable="true">
                 {this.props.text}
             </li>
